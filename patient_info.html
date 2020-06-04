@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reporter || Patient Info</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=4d8c570e95f3392224398d56f2f9addb">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=b01073cb9c2dcab677cd55b10a2b141e">
+</head>
+
+<body>
+    <section>
+        <div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">Patient Information</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <div class="row" id="search_row">
+                <div class="col-sm-12 col-md-6" id="search_bar"><input type="search" autocomplete="on"><button class="btn btn-primary" id="search_button" type="button">Search</button></div>
+                <div class="col-sm-12 col-md-6 text-center" id="add_delete_btn">
+                    <div class="row justify-content-center">
+                        <div class="col text-center"><button class="btn btn-primary text-center" id="add" type="button">Add New</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center mx-auto"><button class="btn btn-primary" id="add" type="button">Delete</button></div>
+                    </div>
+                </div>
+            </div><span><br><br></span></div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col order-12">
+                <form action="patient-info.py" method="post">
+                    <div class="table-responsive table-borderless">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Patient Last Name</th>
+                                    <th>Patient Age</th>
+                                    <th>Patient's Gender</th>
+                                    <th>Next of Kin</th>
+                                    <th>Constituency</th>
+                                    <th>Test ID</th>
+                                    <th>Test Result</th>
+                                    <th>Quarantine</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="patient_id" minlength="1" min="1"></td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="first_name"></td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="last_name"></td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="age" min="0"></td>
+                                    <td class="table-data">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="male"><label class="form-check-label" for="male">Male</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="female"><label class="form-check-label" for="female">Female</label></div>
+                                    </td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="next-ok"></td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" autocomplete="on" name="consituency"></td>
+                                    <td class="table-data"><input class="form-control-plaintext" type="text" name="test_ID"></td>
+                                    <td class="table-data">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="test_pos"><label class="form-check-label" for="psitive">Positive</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="test_neg"><label class="form-check-label" for="negative">Negative</label></div>
+                                    </td>
+                                    <td class="table-data">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="quarantine-yes"><label class="form-check-label" for="yes">Yes</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="Quarantine_no"><label class="form-check-label" for="no">No</label></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="/assets/js/script.min.js?h=083d07ff9c735455464600ca895b41ba"></script>
+</body>
+
+</html>
