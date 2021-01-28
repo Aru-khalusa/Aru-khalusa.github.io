@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Admin || Reporter Registration</title>
+    <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css?h=4d8c570e95f3392224398d56f2f9addb">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="static/assets/css/styles.min.css?h=b01073cb9c2dcab677cd55b10a2b141e">
+</head>
+
+<body>
+    <!-- Start: Navigation Clean -->
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="/admin_page">Admin Section</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="rep" href="/">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="rep" href="/reporter_info">Reporter</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="pat" href="/admin_patient">Patient</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="cons" href="/constituency">Constituency</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End: Navigation Clean -->
+    <section>
+        <div>
+            <div class="row" id="reporter-info">
+                <div class="col-12 text-center">
+                    <h1>REPORTER INFORMATION</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+            <form action="/reporter_info" method="POST">
+                <div class="row" id="search_row" style="margin-left: 10%;">
+                    <!-- <div class="col-sm-12 col-md-6" id="search_bar"> -->
+                        <!-- <input type="search" autocomplete="on" name="search"> -->
+                        <a href="/contact_list"><button class="btn btn-primary" id="search_button" type="button">View Applicants</button></a>
+                        <a href="/reporters_list"><button class="btn btn-secondary" id="search_button" type="button">View All Reporters</button></a>
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-12 col-md-6 text-center" id="add_delete_btn">
+                        <div class="row justify-content-center">
+                            <div class="col text-center"><button class="btn btn-primary text-center" id="add" type="button">Add New</button></div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center mx-auto"><button class="btn btn-primary" id="add" type="button">Delete</button></div>
+                        </div>
+                    </div> -->
+                </div><span><br><br></span></div>
+            </form>
+    </section>
+    <section>
+        <div class="row" style="width: 90%; margin: auto;">
+                <form action="/reporter_info" method="POST">
+                    <div class="table-responsive table-borderless">
+                        <table class="table" style="width: fit-content; margin: auto;">
+                            <thead style="border-bottom: 2px solid #1eb1c5; border-right: 2px solid #1eb1c5; border-left: 2px solid #1eb1c5;">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Assigned Password</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Constituency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- <form action="/reporter_info" method="POST"> -->
+                                    
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" name="reporter_id" minlength="1" min="1"></td>
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" name="firstname"></td>
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" name="lastname"></td>
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" name="password" min="0"></td> 
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" name="start_date"></td>
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" autocomplete="on" name="end_date"></td>
+                                        <td class="table-data"><input class="form-control-plaintext" type="text" autocomplete="on" name="constituency"></td>
+                                        <!-- <button class="btn btn-primary" value="SUBMIT" style="align-content: right;">SUBMIT</button> -->
+                                    <!-- </form>  -->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <button class="btn btn-primary" value="ADD" style="align-content: right;">ADD</button>
+                            </div>
+    
+                        </div>
+<br><br><br>
+                        
+                        <!-- <button class="btn btn-primary" value="SUBMIT" style="align-content: right;">ADD REPORTER</button>
+                        <button class="btn btn-primary" value="SUBMIT" style="align-content: right;">DELETE REPORTER</button> -->
+
+                        <!-- <div class="col-sm-12 col-md-6 text-center" id="add_delete_btn">
+                            <div class="row justify-content-center">
+                                <div class="col text-center"><button class="btn btn-primary text-center" id="add" type="button" value="SUBMIT">Add New</button></div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center mx-auto"><button class="btn btn-primary" id="add" type="button">Delete</button></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </form> 
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="static/assets/js/script.min.js?h=083d07ff9c735455464600ca895b41ba"></script>
+</body>
+
+</html>

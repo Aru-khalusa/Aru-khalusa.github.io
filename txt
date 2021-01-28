@@ -1,0 +1,8 @@
+#FOR THOSE WHO CONTACT
+SELECT user_location,telephone,symptoms FROM contact
+
+
+#FOR STATS
+SELECT test_ID AS Total_Tests, test_result AS Positive, test_result AS Negative, quarantined AS Recoveries
+FROM patient 
+WHERE Positive='Yes'AND Negative='No' AND Recoveries='No'

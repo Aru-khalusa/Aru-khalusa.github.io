@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Admin</title>
+    <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css?h=4d8c570e95f3392224398d56f2f9addb">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="static/assets/css/styles.min.css?h=b01073cb9c2dcab677cd55b10a2b141e">
+</head>
+
+<body>
+    <!-- Start: Navigation Clean -->
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="/admin_page">Admin Section</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="rep" href="/">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="rep" href="/reporter_info">Reporter</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="pat" href="/admin_patient">Patient</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="cons" href="/constituency">Constituency</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End: Navigation Clean -->
+    <hr style="border: 3px solid #062225;">
+    <main class="page">
+        <section class="clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Current Report of Covid-19 in The Gambia</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="table-responsive">
+                        <table class="table" style="width: fit-content; margin: auto;">
+                            <thead style="border-bottom: 2px solid #1eb1c5; border-right: 2px solid #1eb1c5; border-left: 2px solid #1eb1c5;">
+                                <tr>
+                                    <th>Reported Cases</th>
+                                    <th>Total Tests</th>
+                                    <th>Positive Cases</th>
+                                    <th>Negative Cases</th>
+                                    <th>Recoveries</th>
+                                    <th>Recovery Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="text-align: center; font-weight: 900;">
+                                    <td>{{reports}}</td>
+                                    <td>{{tests}}</td>
+                                    <td>{{pos_result}}</td>
+                                    <td>{{neg_result}}</td>
+                                    <td>{{recoveries}}</td>
+                                    <td>{{rec_percentage}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <h1 style="text-align: center; color: #3b99e0;">Reported Cases</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <table border="4" style="width: 80%; margin: auto; text-align: center;">
+                        <thead style="background-color: grey; border-right: 2px solid black; font-weight: bolder;">
+                            <td>Full Name</td>
+                            <td>Location</td>
+                            <td>Contact</td>
+                            <td>Symptoms of Person</td>
+                        </thead>
+                        {% for row in rows %}
+                            <tr>
+                                <td>{{row[0]}}</td>
+                                <td>{{row[1]}}</td>
+                                <td>{{row[2]}}</td>
+                                <td>{{row[3]}}</td>
+                            </tr>
+                        {% endfor %}
+        
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="static/assets/js/script.min.js?h=083d07ff9c735455464600ca895b41ba"></script>
+</body>
+
+</html>
